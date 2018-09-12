@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $patient = DB::table('Patient')->get();
+    return view('welcome', compact('patient'));
 });
