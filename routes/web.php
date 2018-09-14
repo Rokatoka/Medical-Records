@@ -15,3 +15,9 @@ Route::get('/', function () {
     $patient = DB::table('Patient')->get();
     return view('welcome', compact('patient'));
 });
+
+Route::get('/insert', function () {
+    return view('insert');
+});
+
+Route::post('/registered', 'Controller@insert');
