@@ -22,6 +22,6 @@ class Controller extends BaseController
         $data = array('name'=>$firstname, 'surname'=>$lastname, 'patient_username'=>$username, 'password'=>$password);
         DB::table('Patient')->insert($data);
 
-        echo ('Registered');
+        return redrect()->to('/');
     }
 }
