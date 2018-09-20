@@ -9,5 +9,9 @@
     <li><?= $tr->diagnosis; ?></li>
     @endforeach
     </ul>
+    <ol>
+    @foreach ($treatment as $tr)
+    <li><?= $tr->analysis ?></li>
+    </ol>
 </body>
 </html>
