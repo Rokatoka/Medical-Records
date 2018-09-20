@@ -12,4 +12,12 @@ class Treatment extends Model
     public function patient(){
         return $this->belongsTo('App\Patient');
     }
+
+    public function doctor(){
+        return $this->belongsTo('App\Doctor');
+    }
+
+    public function hospital(){
+        return $this->belongsTo('App\Hospital');
+    }
 }
