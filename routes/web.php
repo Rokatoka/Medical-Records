@@ -23,7 +23,9 @@ Route::get('/insert', function () {
 Route::post('/registered', 'Controller@insert');
 
 Route::get('/relationship', function() {
-    $treatment = App\Patient::find(2)->treatment;
+    $treatmentpat = App\Patient::find(2)->treatment;
+    $treatmentdoc = App\Doctor::find(1)->treatment;
+    $treatmenthos = App\Hospital::find(1)->treatment;
     return view('relationship', compact('treatment'));
 });
 
